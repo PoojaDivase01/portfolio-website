@@ -144,4 +144,133 @@ h2{
   position:absolute;
   top:20px;
   right:30px;
-  font-size:30px
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+
+/* footer */
+footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:20px;
+}
+
+/* responsive */
+@media(max-width:600px){
+  nav{flex-wrap:wrap;}
+  header h1{font-size:1.8rem;}
+  .profile-pic{width:100px;height:100px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="pooja.jpeg" class="profile-pic">
+  <h1>Pooja Divase</h1>
+  <p>MCA Student | Web Developer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I am an MCA student passionate about web development and programming.
+      I have hands-on experience with HTML, CSS, JavaScript, Python, SQL, and AWS.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Python</span>
+      <span class="skill">SQL</span>
+      <span class="skill">AWS</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="card">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio using HTML & CSS.</p>
+      </div>
+      <div class="project">
+        <h3>Student Management System</h3>
+        <p>Python & SQL based project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="card">
+    <h2>My Certificates</h2>
+
+    <div class="certificates-container">
+      <div class="certificate-card">
+        <h3>AWS Cloud Practitioner</h3>
+        <p>Amazon Web Services</p>
+        <button onclick="openModal('aws.jpeg')">View Certificate</button>
+      </div>
+
+      <div class="certificate-card">
+        <h3>SQL & Database</h3>
+        <p>IBM</p>
+        <button onclick="openModal('sql.jpeg')">View Certificate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: divasepooja02@gmail.com</p>
+    <p>GitHub: <a href="#">github.com/PoojaDivase01</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/pooja-divase</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pooja Divase</p>
+</footer>
+
+<!-- modal -->
+<div class="modal" id="certificateModal">
+  <span onclick="closeModal()">×</span>
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img){
+  document.getElementById("certificateModal").style.display="flex";
+  document.getElementById("modalImg").src=img;
+}
+
+function closeModal(){
+  document.getElementById("certificateModal").style.display="none";
+}
+</script>
+
+</body>
+</html>
